@@ -137,7 +137,7 @@
   <div class="layout">
     <nav class="toc">
       <h2>Contents</h2>
-      <a href="#sec-1">1. MAIN METHOD</a><a href="#sec-2">2. JAVA OUTPUT</a><a href="#sec-3">3. VARIABLE INT</a><a href="#sec-4">4. WHOLE NUMBERS</a><a href="#sec-5">5. DECIMAL NUMBERS</a><a href="#sec-6">6. BOOLEAN: TRUE OR FALSE</a><a href="#sec-7">7. CHAR</a><a href="#sec-8">8. TYPE CASTING</a><a href="#sec-9">9. OPERATORS</a><a href="#sec-10">10. STRINGS</a><a href="#sec-11">11. IF STATEMENT</a><a href="#sec-12">12. SWITCH STATEMENT</a><a href="#sec-13">13. WHILE LOOP</a><a href="#sec-14">14. FOR LOOP</a><a href="#sec-15">15. BREAK AND CONTINUE KEYWORDS</a><a href="#sec-16">16. ARRAYS</a><a href="#sec-17">17. FOR EACH LOOP</a><a href="#sec-18">18. MULTI DIMENSIONAL ARRAYS</a><a href="#sec-19">19. METHODS</a>
+      <a href="#sec-1">1. MAIN METHOD</a><a href="#sec-2">2. JAVA OUTPUT</a><a href="#sec-3">3. VARIABLE INT</a><a href="#sec-4">4. WHOLE NUMBERS</a><a href="#sec-5">5. DECIMAL NUMBERS</a><a href="#sec-6">6. BOOLEAN: TRUE OR FALSE</a><a href="#sec-7">7. CHAR</a><a href="#sec-8">8. TYPE CASTING</a><a href="#sec-9">9. OPERATORS</a><a href="#sec-10">10. STRINGS</a><a href="#sec-11">11. IF STATEMENT</a><a href="#sec-12">12. SWITCH STATEMENT</a><a href="#sec-13">13. WHILE LOOP</a><a href="#sec-14">14. FOR LOOP</a><a href="#sec-15">15. BREAK AND CONTINUE KEYWORDS</a><a href="#sec-16">16. ARRAYS</a><a href="#sec-17">17. FOR EACH LOOP</a><a href="#sec-18">18. MULTI DIMENSIONAL ARRAYS</a><a href="#sec-19">19. ARRAYLIST</a><a href="#sec-20">20. METHODS</a>
     </nav>
 
     <main>
@@ -639,18 +639,83 @@
             System.out.println();
         }
 
-    } // endofmain
-
 </code></pre>
 
   <p class="explain">A 2D array is an array of arrays (rows and columns). Nested loops are the standard way to populate and print a grid. This pattern shows how row/col indexing works in practice.</p>
 </section><section class="section" id="sec-19">
   <div class="section-header">
-    <h2>19. METHODS</h2>
+    <h2>19. ARRAYLIST</h2>
     <button class="copy" data-target="sec-19">Copy code</button>
   </div>
 
-  <pre class="code"><code class="language-java">    // 19. METHODS
+  <pre class="code"><code class="language-java">        // 19. ARRAYLIST
+
+        // Create a Scanner object to read user input
+
+        Scanner input = new Scanner(System.in);
+
+        // Create an ArrayList to store the user input
+
+        ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();
+
+        // Initialize a variable to store the sum of the numbers
+
+        int sum = 0;
+
+        // Prompt the user to enter numbers and read them into the ArrayList
+
+        System.out.println(&quot;Please enter numbers (type -101 to stop):&quot;);
+
+        // Populate the ArrayList with user input
+
+        while (true) {
+            int num = input.nextInt();
+
+            if (num == -101) {
+                break;
+            }
+            numbers.add(num);
+        }
+
+        input.close();
+
+        // Print the populated ArrayList of numbers
+
+        System.out.println(numbers);
+
+        // Check if the ArrayList is empty
+
+        if (numbers.isEmpty()) {
+            System.out.println(&quot;No numbers entered.&quot;);
+            return;
+        }
+
+        // Add up the total of the numbers in the ArrayList
+
+        for (int i = 0; i &lt; numbers.size(); i++) {
+            sum += numbers.get(i);
+        }
+
+        // Calculate the average of the numbers
+
+        double average = (double) sum / numbers.size();
+
+        // Print the average
+
+        System.out.println(&quot;The average of the numbers is: &quot; + average);
+
+    } // endofmain
+
+</code></pre>
+
+  <p class="explain">This section covers: ARRAYLIST. The explanation below is tied to the code shown above.</p>
+</section><section class="section" id="sec-20">
+  <div class="section-header">
+    <h2>20. METHODS</h2>
+    <button class="copy" data-target="sec-20">Copy code</button>
+  </div>
+
+  <pre class="code"><code class="language-java">    // 20. METHODS
 
     public static int additionFunction() {
 
