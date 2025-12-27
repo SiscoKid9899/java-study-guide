@@ -124,6 +124,51 @@
       margin: 6px 0 0 0;
     }
 
+    /* After the code panel */
+    .aftercode {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 10px 0 0 0;
+    }
+
+    .aftercode-title {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 10px 0;
+      letter-spacing: 0.2px;
+    }
+
+    .aftergrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .after-block h4 {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .after-block ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #d0d6e0;
+      font-size: 14px;
+    }
+
+    .after-block li {
+      margin: 4px 0;
+    }
+
+    @media (min-width: 900px) {
+      .aftergrid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     @media (max-width: 900px) {
       .layout { grid-template-columns: 1fr; }
       .toc { position: relative; top: 0; }
@@ -154,6 +199,28 @@
 </code></pre>
 
   <p class="explain">main() is the entry point the JVM calls first. Anything inside this method runs in order. This is where your examples execute.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>public static void main(String[] args), JVM entry point, statements executed top-to-bottom</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use main() as the starting point for running and testing your examples.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>The JVM starts here, then runs each section in order inside main().</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Forgetting static; putting code outside a method; mismatched braces causing compile errors.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Add more helper methods and call them from main to keep code organized.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-2">
   <div class="section-header">
     <h2>2. JAVA OUTPUT</h2>
@@ -167,6 +234,28 @@
 </code></pre>
 
   <p class="explain">System.out.println(...) writes text to the console and then moves to a new line. This is the simplest way to verify your program is running and to inspect values.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>System.out.println(...), string literals, console output</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use println to verify your program runs and to inspect values while learning/debugging.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Prints a message to the console, then moves to the next line.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Missing quotes around text; forgetting semicolons; confusing print vs println.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Print variables, expressions, and formatted output (printf).</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-3">
   <div class="section-header">
     <h2>3. VARIABLE INT</h2>
@@ -184,6 +273,28 @@
 </code></pre>
 
   <p class="explain">An int stores whole numbers. You declare age, print it, reassign it, then print again. This demonstrates variable declaration, assignment, reassignment, and string concatenation.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>int variable, assignment (=), reassignment, string concatenation with +</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use int for whole numbers like counts, ages, indexes, and loop counters.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Creates an int, prints it, changes it, and prints again to show reassignment.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Using int for decimals; forgetting that reassignment overwrites the old value.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Try other types (double, boolean) and do arithmetic with int values.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-4">
   <div class="section-header">
     <h2>4. WHOLE NUMBERS</h2>
@@ -210,6 +321,28 @@
 </code></pre>
 
   <p class="explain">Java has several whole-number types with different sizes/ranges (byte, short, int, long). Pick the smallest type that safely fits your values; long literals often use an L suffix.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>byte, short, int, long, numeric literals, long suffix (L)</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use these when you need whole numbers and want the right size/range.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Declares multiple integer types to show different ranges and how to store values.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Overflow when the value is too large; forgetting L on long literals.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Compare ranges, do arithmetic, and notice how Java chooses result types.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-5">
   <div class="section-header">
     <h2>5. DECIMAL NUMBERS</h2>
@@ -227,6 +360,28 @@
 </code></pre>
 
   <p class="explain">float (32-bit) and double (64-bit) store decimals. Java treats decimal literals as double by default, so floats usually need an F suffix. doubles are typically preferred for precision.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>float, double, float suffix (F), decimal literals</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use double for most decimal math; use float when you specifically need 32-bit.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Stores decimals using float and double to show precision and literal rules.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Forgetting F on float; expecting perfect precision (decimals can be approximate).</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Do division with doubles and compare results to int division.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-6">
   <div class="section-header">
     <h2>6. BOOLEAN: TRUE OR FALSE</h2>
@@ -245,6 +400,28 @@
 </code></pre>
 
   <p class="explain">boolean values represent true/false state. These are used directly in conditions (if/while). This block shows toggling a state variable and printing it to confirm changes.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>boolean, true/false, reassignment, printing state</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use booleans for conditions (if/while) and state (flags like “isRaining”).</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Creates booleans and toggles a value to show true/false changes.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Confusing = (assignment) with == (comparison); not updating the boolean in loops.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Use booleans in if statements and combine them with &amp;&amp; and ||.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-7">
   <div class="section-header">
     <h2>7. CHAR</h2>
@@ -252,6 +429,7 @@
   </div>
 
   <pre class="code"><code class="language-java">        // 7. CHAR
+
         // holds only one single number, symbol or letter
 
         char myChar = &#x27;A&#x27;;
@@ -263,6 +441,28 @@
 </code></pre>
 
   <p class="explain">char holds a single UTF-16 code unit (one character in many common cases). Escape sequences like \n (newline) and \t (tab) represent special formatting characters.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>char, character literals (&#x27;A&#x27;), escape sequences \n and \t</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use char for single characters or when working with character codes.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Declares chars for letter/number/symbol and shows newline/tab characters.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Using double quotes instead of single quotes; expecting char to hold a full string.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Convert between char and int to see underlying numeric values.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-8">
   <div class="section-header">
     <h2>8. TYPE CASTING</h2>
@@ -304,6 +504,28 @@
 </code></pre>
 
   <p class="explain">Casting converts a value from one type to another. Widening conversions (int -&gt; double) are automatic. Narrowing (double -&gt; int) must be explicit and may lose data. Casting also helps show how chars map to numbers.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>implicit cast (int -&gt; double), explicit cast (double -&gt; int), char/int arithmetic</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use casting when you need to convert types, especially narrowing conversions.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Shows automatic widening, manual narrowing with data loss, and char/int conversions.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Losing decimals when casting to int; unexpected results with char math; overflow.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Practice casting in formulas and compare results with/without casts.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-9">
   <div class="section-header">
     <h2>9. OPERATORS</h2>
@@ -345,6 +567,28 @@
 </code></pre>
 
   <p class="explain">Arithmetic operators compute values (+ - * / %). Comparison operators produce booleans (== != &gt; &lt; &gt;= &lt;=). Logical operators combine booleans (&amp;&amp; || !) and are the backbone of decision-making.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>arithmetic (+ - * / %), comparison (== != &gt; &lt; &gt;= &lt;=), logical (&amp;&amp; || !)</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use operators to calculate values, compare values, and combine true/false conditions.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Demonstrates arithmetic math, comparisons returning booleans, and logical expressions.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Integer division truncates; using == for strings; confusing ! with !=.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Use these operators inside if/while and build more complex conditions.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-10">
   <div class="section-header">
     <h2>10. STRINGS</h2>
@@ -371,6 +615,28 @@
 </code></pre>
 
   <p class="explain">Strings are objects that store text. You can concatenate them with + and call methods like length(), toUpperCase(), and toLowerCase(). Use equals(...) for content comparison, not ==.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>String, concatenation (+), length(), printing</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use Strings any time you store text or build messages for output/UI.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Creates strings, concatenates them, and checks the string length.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Using == instead of equals() for string comparison; null strings causing errors.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Practice equals(), substring(), toUpperCase(), and reading strings with Scanner.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-11">
   <div class="section-header">
     <h2>11. IF STATEMENT</h2>
@@ -394,6 +660,28 @@
 </code></pre>
 
   <p class="explain">if/else-if/else evaluates conditions top-to-bottom and runs the first matching branch. Ordering matters: broader conditions should usually come after more specific ones.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>if / else if / else, relational operators, branching</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use if statements when your program needs to choose between paths.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Checks age and prints a message based on which condition is true.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Order matters (more specific checks should usually come first); unreachable branches.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Fix the logic order (check &gt;= 60 before &gt;= 18) and try different ages.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-12">
   <div class="section-header">
     <h2>12. SWITCH STATEMENT</h2>
@@ -435,6 +723,28 @@
 </code></pre>
 
   <p class="explain">switch selects one branch based on a single value. case labels define matches and break stops fall-through. default runs when no case matches.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>switch, case, break, default, int selection</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use switch when you have many exact matches for a single variable/value.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Picks a day name based on dayOfWeek and prints the result.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Missing break causes fall-through; values must match case labels; wrong type used.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Try switching on strings and group cases to reduce repetition.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-13">
   <div class="section-header">
     <h2>13. WHILE LOOP</h2>
@@ -455,6 +765,28 @@
 </code></pre>
 
   <p class="explain">while repeats as long as its condition is true. Make sure something changes inside the loop so the condition eventually becomes false, preventing an infinite loop.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>while(condition), loop variable, increment (number++)</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use while when you want to repeat until a condition becomes false (unknown iteration count).</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Prints numbers 0 through 5 by looping until number &gt; 5.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Infinite loops if you forget to update the counter; off-by-one errors.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Change the condition and print only even numbers using if inside the loop.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-14">
   <div class="section-header">
     <h2>14. FOR LOOP</h2>
@@ -474,6 +806,28 @@
 </code></pre>
 
   <p class="explain">for loops are ideal for counting and arrays. The structure is: initialize; condition; update. This runs predictably for a known number of iterations.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>for(init; condition; update), counter variable i, predictable iteration</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use for loops when you know how many times you want to repeat.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Prints 0 through 5 using a for loop, then prints the sum from sumUpNumbers().</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Off-by-one errors (&lt;= vs &lt;); changing i inside the loop unexpectedly.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Use for loops to fill arrays and build totals.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-15">
   <div class="section-header">
     <h2>15. BREAK AND CONTINUE KEYWORDS</h2>
@@ -504,6 +858,28 @@
 </code></pre>
 
   <p class="explain">break exits the loop immediately. continue skips the rest of the current iteration and moves to the next one. Both are useful for controlling loop flow cleanly.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>break (exit loop), continue (skip to next iteration), if inside loops</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use break to stop early; use continue to skip a specific case.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>First loop stops at i==4; second loop prints “four” then skips printing 4 normally.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Overusing break/continue can make loops harder to read; forgetting what gets skipped.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Use break/continue with input loops (sentinel values) and searching lists.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-16">
   <div class="section-header">
     <h2>16. ARRAYS</h2>
@@ -515,7 +891,6 @@
         // dataType[] arrayName = new dataType[arraySize];
 
         int[] numbersArray = new int[5];
-
 
         // storing values in the array manually
 
@@ -541,6 +916,28 @@
 </code></pre>
 
   <p class="explain">Arrays store fixed-size sequences of the same type. Indexing starts at 0. You can populate arrays manually or with loops, and print them using Arrays.toString(...) for readability.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>int[] arrays, fixed size, indexing, length, Arrays.toString(), for loop filling</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use arrays when the size is fixed and you want fast indexed access.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Creates arrays, assigns values manually and with a loop, and prints results.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Index out of bounds; confusing length with last index; forgetting arrays start at 0.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Loop over arrays to compute sums/averages; compare arrays vs ArrayList.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-17">
   <div class="section-header">
     <h2>17. FOR EACH LOOP</h2>
@@ -566,6 +963,28 @@
 </code></pre>
 
   <p class="explain">The enhanced for loop iterates through each element without an index. It’s simpler for read-only iteration, but you don’t directly control the index unless you track it separately.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>enhanced for loop (for-each), element variable, array iteration</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use for-each when you want to read every element and don’t need the index.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Fills an array, then prints each element using a for-each loop.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>You can’t directly access the index; changing “element” won’t change the array element.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Use for-each to compute sums and find max/min values.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-18">
   <div class="section-header">
     <h2>18. MULTI DIMENSIONAL ARRAYS</h2>
@@ -642,6 +1061,28 @@
 </code></pre>
 
   <p class="explain">A 2D array is an array of arrays (rows and columns). Nested loops are the standard way to populate and print a grid. This pattern shows how row/col indexing works in practice.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>2D arrays (int[][]), row/col indexing, nested loops, initialization with literals, printf formatting</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use 2D arrays for grids, tables, matrices, or row/column data.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Creates 2D arrays, fills values manually and with loops, prints a grid and a times table.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Mixing up rows vs columns; wrong loop bounds; jagged arrays (rows can have different lengths).</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Write a method to print any 2D array and try different table sizes.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-19">
   <div class="section-header">
     <h2>19. ARRAYLIST</h2>
@@ -708,7 +1149,29 @@
 
 </code></pre>
 
-  <p class="explain">An ArrayList in Java is a resizable-array that provides a dynamic and flexible way to store and manage collections of objects.Unlike traditional arrays, which have a fixed size, an ArrayList can grow or shrink as elements are added or removed during runtime </p>
+  <p class="explain">An ArrayList in Java is a resizable-array that provides a dynamic and flexible way to store and manage collections of objects. Unlike traditional arrays, which have a fixed size, an ArrayList can grow or shrink as elements are added or removed during runtime.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>ArrayList&lt;Integer&gt;, Scanner, while(true), sentinel value (-101), add(), size(), get(), isEmpty(), for loop</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use when you don’t know how many items you’ll collect and want a resizable list.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Read ints until -101, store them, handle empty input, sum values, compute and print average.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Not checking isEmpty(); forgetting to cast for average; infinite loop if sentinel is never entered.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Add min/max; validate non-integer input with hasNextInt(); compute median.</li></ul>
+            </div>
+          </div>
+        </div>
 </section><section class="section" id="sec-20">
   <div class="section-header">
     <h2>20. METHODS</h2>
@@ -769,6 +1232,28 @@
 </code></pre>
 
   <p class="explain">Methods (functions) let you reuse logic. A return type like int means the method produces a value. Parameters (if present) would let you pass input in; return sends output back to the caller.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">After the code</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>What’s being used</h4>
+              <ul><li>method declaration, return type (int), static vs instance methods, return statement, parameters (none here)</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use methods to reuse logic and keep main() clean and readable.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Defines methods that return values (additionFunction, sumUpNumbers) and a switch-based month method.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Calling instance methods without creating an object; missing return; wrong return type.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Add parameters (inputs), overload methods, and separate sections into their own methods.</li></ul>
+            </div>
+          </div>
+        </div>
 </section>
     </main>
   </div>
