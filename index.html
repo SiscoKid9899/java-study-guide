@@ -182,7 +182,7 @@
   <div class="layout">
     <nav class="toc">
       <h2>Contents</h2>
-      <a href="#sec-1">1. MAIN METHOD</a><a href="#sec-2">2. JAVA OUTPUT</a><a href="#sec-3">3. VARIABLE INT</a><a href="#sec-4">4. WHOLE NUMBERS</a><a href="#sec-5">5. DECIMAL NUMBERS</a><a href="#sec-6">6. BOOLEAN: TRUE OR FALSE</a><a href="#sec-7">7. CHAR</a><a href="#sec-8">8. TYPE CASTING</a><a href="#sec-9">9. OPERATORS</a><a href="#sec-10">10. STRINGS</a><a href="#sec-11">11. IF STATEMENT</a><a href="#sec-12">12. SWITCH STATEMENT</a><a href="#sec-13">13. WHILE LOOP</a><a href="#sec-14">14. FOR LOOP</a><a href="#sec-15">15. BREAK AND CONTINUE KEYWORDS</a><a href="#sec-16">16. ARRAYS</a><a href="#sec-17">17. FOR EACH LOOP</a><a href="#sec-18">18. MULTI DIMENSIONAL ARRAYS</a><a href="#sec-19">19. ARRAYLIST</a><a href="#sec-20">20. METHODS</a>
+      <a href="#sec-1">1. MAIN METHOD</a><a href="#sec-2">2. JAVA OUTPUT</a><a href="#sec-3">3. VARIABLE INT</a><a href="#sec-4">4. WHOLE NUMBERS</a><a href="#sec-5">5. DECIMAL NUMBERS</a><a href="#sec-6">6. BOOLEAN: TRUE OR FALSE</a><a href="#sec-7">7. CHAR</a><a href="#sec-8">8. TYPE CASTING</a><a href="#sec-9">9. OPERATORS</a><a href="#sec-10">10. STRINGS</a><a href="#sec-11">11. IF STATEMENT</a><a href="#sec-12">12. SWITCH STATEMENT</a><a href="#sec-13">13. WHILE LOOP</a><a href="#sec-14">14. FOR LOOP</a><a href="#sec-15">14. FOR LOOP</a><a href="#sec-16">15. BREAK AND CONTINUE KEYWORDS</a><a href="#sec-17">16. ARRAYS</a><a href="#sec-18">17. FOR EACH LOOP</a><a href="#sec-19">18. MULTI DIMENSIONAL ARRAYS</a><a href="#sec-20">19. ARRAYLIST</a><a href="#sec-21">20. METHODS</a>
     </nav>
 
     <main>
@@ -193,6 +193,9 @@
   </div>
 
   <pre class="code"><code class="language-java">    // 1. MAIN METHOD
+
+    // This is the entry point of the program.
+    // When you run the application, the Java Virtual Machine begins execution here.
 
     public static void main(String[] args) {
 
@@ -229,6 +232,8 @@
 
   <pre class="code"><code class="language-java">        // 2. JAVA OUTPUT
 
+        // Print a line of text to the console to confirm the program is running
+
         System.out.println(&quot;Hello my Friends!&quot;);
 
 </code></pre>
@@ -264,10 +269,20 @@
 
   <pre class="code"><code class="language-java">        // 3. VARIABLE INT
 
+        // Declare an int variable and assign it an initial value
+
         int age = 44;
+
+        // Print the current value of the variable using string concatenation
+
         System.out.println(&quot;My Age = &quot; + age);
 
+        // Reassign the variable to a new value
+
         age = 99;
+
+        // Print the updated value to show that reassignment overwrote the original value
+
         System.out.println(&quot;My age is now &quot; + age);
 
 </code></pre>
@@ -303,19 +318,28 @@
 
   <pre class="code"><code class="language-java">        // 4. WHOLE NUMBERS
 
-        // byte: -128 --&gt; 127
+        // byte stores very small whole numbers using 1 byte of memory
+        // range: -128 to 127
+
         byte x = 100;
 
-        // short: -32,768 --&gt; 32,767
+        // short stores slightly larger whole numbers using 2 bytes of memory
+        // range: -32,768 to 32,767
+
         short y = 7777;
 
-        // int: -214783648 --&gt; 2147483647
+        // int is the most commonly used whole-number type (4 bytes)
+        // range: -2,147,483,648 to 2,147,483,647
+
         int z = 88776655;
 
-        // long: -9223372036854775808 --&gt; 9223372036854775807
+        // long stores very large whole numbers (8 bytes)
+        // the &#x27;L&#x27; suffix tells Java this is a long literal
+
         long w = 112233445567788L;
 
-        // addition with variables
+        // Call a method that returns the sum of two numbers and print the result
+
         System.out.println(additionFunction());
 
 </code></pre>
@@ -351,10 +375,14 @@
 
   <pre class="code"><code class="language-java">        // 5. DECIMAL NUMBERS
 
-        // float: you should add &quot;F&quot; or &quot;f&quot; at the end of the number - 32 bits
+        // Store a decimal value using float (32-bit precision)
+        // The &#x27;F&#x27; suffix tells Java this literal is a float
+
         float pi = 3.14F;
 
-        // Double: store decimal numbers with higher precision - 64 bits
+        // Store a decimal value using double (64-bit precision)
+        // Java uses double by default for decimal numbers
+
         double pi2 = 3.14159;
 
 </code></pre>
@@ -390,11 +418,24 @@
 
   <pre class="code"><code class="language-java">        // 6. BOOLEAN: TRUE OR FALSE
 
+        // Declare a boolean variable to represent a true/false state
+
         boolean isRaining = true;
 
+        // Start with a false state
+
         boolean allCoinsCollected = false;
+
+        // Print the current boolean value
+
         System.out.println(&quot;Are the coins collected? &quot; + allCoinsCollected);
+
+        // Change the state by reassigning the boolean
+
         allCoinsCollected = true;
+
+        // Print the updated value to confirm the state change
+
         System.out.println(&quot;Are the coins collected? &quot; + allCoinsCollected);
 
 </code></pre>
@@ -430,13 +471,17 @@
 
   <pre class="code"><code class="language-java">        // 7. CHAR
 
-        // holds only one single number, symbol or letter
+        // char stores exactly one character (letter, number, or symbol)
+        // Single quotes are required for character literals
 
         char myChar = &#x27;A&#x27;;
         char myNumber = &#x27;7&#x27;;
         char mySymbol = &#x27;$&#x27;;
-        char newLine = &#x27;\n&#x27;;
-        char tab = &#x27;\t&#x27;;
+
+        // Special escape characters represent formatting, not visible symbols
+
+        char newLine = &#x27;\n&#x27;; // moves output to a new line
+        char tab = &#x27;\t&#x27;;     // inserts a horizontal tab
 
 </code></pre>
 
@@ -471,35 +516,51 @@
 
   <pre class="code"><code class="language-java">        // 8. TYPE CASTING
 
-        /* Type Casting: is the process of converting
-        a value from one data type to another. */
+        // Type casting is the process of converting a value from one data type to another
 
-        // Implicit Type Casting (Automatically happens because there is no data loss)
+        // ---------- Implicit Type Casting ----------
+        // This happens automatically when there is no risk of data loss
+        // (for example, converting an int to a double)
 
         int numInt = 10;
-        double numDouble = numInt; // 10.0
+
+        // The int value is automatically converted to a double
+
+        double numDouble = numInt; // becomes 10.0
+
+        // Print both values to compare the result
 
         System.out.println(&quot;number INT: &quot; + numInt);
         System.out.println(&quot;Number DOUBLE: &quot; + numDouble);
 
-        // Explicit Type Casting (Manually convert values from one data type to another.
-        // Used when converting from larger to smaller data types
-        // Used when there is a possibility of data loss
+        // ---------- Explicit Type Casting ----------
+        // Required when converting from a larger type to a smaller type
+        // This can cause data loss
 
         double pi3 = 3.14;
         System.out.println(&quot;PI as a double = &quot; + pi3); // 3.14
 
+        // Cast the double to an int, which removes the decimal portion
+
         int intPI = (int) pi3;
+
+        // Print the result to show the data loss
+
         System.out.println(&quot;PI cast as an INT with data loss = &quot; + intPI); // 3
 
-        // Type Casting between different Data Types
+        // ---------- Casting Between Different Data Types ----------
+        // Characters are stored as numeric values (Unicode)
 
         int myInt = 5;
-        char charA = &#x27;A&#x27;;
-        char typeCastChar = (char) (myInt + charA);
-        int typeCastInt = myInt + charA; // Implicitly cast as an INT
-        System.out.println(typeCastChar); // &#x27;F&#x27;
-        System.out.println(typeCastInt); // 70
+        char charA = &#x27;A&#x27;; // &#x27;A&#x27; has a numeric value of 65
+
+        // Add an int to a char and cast the result back to a char
+
+        char typeCastChar = (char) (myInt + charA); // F
+
+        // Add an int to a char and keep the result as an int
+
+        int typeCastInt = myInt + charA; // 70
 
 </code></pre>
 
@@ -534,33 +595,41 @@
 
   <pre class="code"><code class="language-java">        // 9. OPERATORS
 
-        // Arithmetic Operators + - * / %
+        // ---------- Arithmetic Operators ----------
+        // Used to perform mathematical calculations
 
-        System.out.println(1 + 2); // 3
-        System.out.println(2 * 2); // 4
-        System.out.println(10/5); // 2
-        System.out.println(10%5); // 0 (No Remainder. The left over after division)
+        System.out.println(1 + 2);   // addition → 3
+        System.out.println(2 * 2);   // multiplication → 4
+        System.out.println(10 / 5);  // division → 2
+        System.out.println(10 % 5);  // modulus (remainder) → 0
 
-        // Comparison Operators: == != &gt; &lt; &gt;= &lt;=
+        // ---------- Comparison Operators ----------
+        // Used to compare values and produce true or false
 
         int ten = 10;
-        System.out.println(ten == 9); // false
-        System.out.println(ten == 10); // true
-        System.out.println(ten != 10); // false
-        System.out.println(ten != 999); // true
-        System.out.println(ten &gt; 100); // false
-        System.out.println(ten &lt; 100); // true
-        System.out.println(ten &gt;= 999); // false
-        System.out.println(ten &gt;= 3); // true
-        System.out.println(ten &lt;= 3); // false
-        System.out.println(ten &lt;= 100); // true
 
-        // Logical Operators: &amp;&amp; || !
+        System.out.println(ten == 9);    // false
+        System.out.println(ten == 10);   // true
+        System.out.println(ten != 10);   // false
+        System.out.println(ten != 999);  // true
+        System.out.println(ten &gt; 100);   // false
+        System.out.println(ten &lt; 100);   // true
+        System.out.println(ten &gt;= 999);  // false
+        System.out.println(ten &gt;= 3);    // true
+        System.out.println(ten &lt;= 3);    // false
+        System.out.println(ten &lt;= 100);  // true
+
+        // ---------- Logical Operators ----------
+        // Used to combine or invert boolean values
 
         boolean isSunny = true;
         boolean needUmbrella = false;
 
+        // AND (&amp;&amp;): both conditions must be true
+
         boolean shouldGoOutside = isSunny &amp;&amp; !needUmbrella; // true
+
+        // OR (||): at least one condition must be true
 
         boolean canPlayGamesInside = isSunny || needUmbrella; // true
 
@@ -597,19 +666,27 @@
 
   <pre class="code"><code class="language-java">        // 10. STRINGS
 
-        // Creating Strings
-
+        // Create a String variable to store text
         String sayHello = &quot;Hello &quot;;
-        System.out.println(sayHello); // Hello with a space at the end
 
-        // Concatenating Strings: &quot;+&quot;
+        // Print the String value to the console
+
+        System.out.println(sayHello); // Includes a space at the end
+
+        // Create another String to combine with the first one
 
         String myFriends = &quot;My Friends!&quot;;
+
+        // Concatenate two Strings using the + operator
+
         System.out.println(sayHello + myFriends); // Hello My Friends!
 
-        // String Length
+        // Get the number of characters in the String
 
         int stringLength = myFriends.length();
+
+        // Print the length of the String
+
         System.out.println(&quot;MyFriend string is &quot; + stringLength + &quot; characters long.&quot;); // 11
 
 </code></pre>
@@ -645,15 +722,22 @@
 
   <pre class="code"><code class="language-java">        // 11. IF STATEMENT
 
-        // If statement Else If statement and Else statement
+        // Store an age value to test against different conditions
 
         int myAge = 44;
 
+        // Check conditions from top to bottom
+        // The first condition that evaluates to true will run
+
         if (myAge &gt;= 18) {
             System.out.println(&quot;You are an adult!&quot;);
-        } else if (myAge &gt;= 60) {
+        }
+        // This condition is never reached for ages 60+ because the previous check already matched
+        else if (myAge &gt;= 60) {
             System.out.println(&quot;Aged Person!&quot;);
-        } else {
+        }
+        // Runs only if none of the previous conditions were true
+        else {
             System.out.println(&quot;You are a Minor&quot;);
         }
 
@@ -690,31 +774,44 @@
 
   <pre class="code"><code class="language-java">        // 12. SWITCH STATEMENT
 
+        // Store a numeric value representing a day of the week
+
         int dayOfWeek = 4;
+
+        // Select one execution path based on the value of dayOfWeek
 
         switch (dayOfWeek) {
 
+            // Each case checks for an exact match
             case 0:
                 System.out.println(&quot;Sunday&quot;);
-                break;
+                break; // Stop executing the switch once a match is found
+
             case 1:
                 System.out.println(&quot;Monday&quot;);
                 break;
+
             case 2:
                 System.out.println(&quot;Tuesday&quot;);
                 break;
+
             case 3:
                 System.out.println(&quot;Wednesday&quot;);
                 break;
+
             case 4:
                 System.out.println(&quot;Thursday&quot;);
                 break;
+
             case 5:
                 System.out.println(&quot;Friday&quot;);
                 break;
+
             case 6:
                 System.out.println(&quot;Saturday&quot;);
                 break;
+
+            // Runs if no case matches the value
             default:
                 System.out.println(&quot;Not A Day&quot;);
                 break;
@@ -753,12 +850,18 @@
 
   <pre class="code"><code class="language-java">        // 13. WHILE LOOP
 
+        // Initialize a loop control variable
+
         int number = 0;
 
+        // Continue looping as long as the condition remains true
+
         while (number &lt;= 5) {
-            // Code to be executed repeatedly
-            // as long as the condition is true
+
+            // Print the current value of the loop variable
             System.out.println(number);
+
+            // Update the loop variable so the loop will eventually stop
             number++;
         }
 
@@ -795,14 +898,6 @@
 
   <pre class="code"><code class="language-java">        // 14. FOR LOOP
 
-        for (int i = 0; i &lt;= 5; i++) {
-            // initialization; condition; update
-            // code to be executed repeatedly
-            System.out.println(i);
-        }
-
-        System.out.println(sumUpNumbers()); // 55
-
 </code></pre>
 
   <p class="explain">for loops are ideal for counting and arrays. The structure is: initialize; condition; update. This runs predictably for a known number of iterations.</p>
@@ -830,30 +925,86 @@
         </div>
 </section><section class="section" id="sec-15">
   <div class="section-header">
-    <h2>15. BREAK AND CONTINUE KEYWORDS</h2>
+    <h2>14. FOR LOOP</h2>
     <button class="copy" data-target="sec-15">Copy code</button>
+  </div>
+
+  <pre class="code"><code class="language-java">        // 14. FOR LOOP
+
+        // Loop from 0 up to and including 5
+
+        for (int i = 0; i &lt;= 5; i++) {
+
+            // Print the current value of the loop counter
+            System.out.println(i);
+        }
+
+        // Call a method that returns the sum of numbers from 0 to 10
+
+        System.out.println(sumUpNumbers()); // 55
+
+</code></pre>
+
+  <p class="explain">for loops are ideal for counting and arrays. The structure is: initialize; condition; update. This runs predictably for a known number of iterations.</p>
+
+  <div class="aftercode">
+          <div class="aftercode-title">What’s happening here?</div>
+          <div class="aftergrid">
+            <div class="after-block">
+              <h4>Key concepts</h4>
+              <ul><li>for(initialization; condition; update), loop counter, predictable iteration</li></ul>
+            </div><div class="after-block">
+              <h4>When to use this</h4>
+              <ul><li>Use for loops when you know exactly how many times you want to repeat.</li></ul>
+            </div><div class="after-block">
+              <h4>Summary</h4>
+              <ul><li>Prints numbers 0 through 5, then prints the sum of numbers from 0 to 10.</li></ul>
+            </div><div class="after-block">
+              <h4>Common mistakes</h4>
+              <ul><li>Off-by-one errors (&lt;= vs &lt;); modifying the counter inside the loop.</li></ul>
+            </div><div class="after-block">
+              <h4>Next step</h4>
+              <ul><li>Use for loops to populate arrays and compute totals.</li></ul>
+            </div>
+          </div>
+        </div>
+</section><section class="section" id="sec-16">
+  <div class="section-header">
+    <h2>15. BREAK AND CONTINUE KEYWORDS</h2>
+    <button class="copy" data-target="sec-16">Copy code</button>
   </div>
 
   <pre class="code"><code class="language-java">        // 15. BREAK AND CONTINUE KEYWORDS
 
+        // ---------- Using break ----------
+        // break immediately exits the loop
+
         for (int i = 0; i &lt; 10; i++) {
 
+            // Stop the loop completely when i reaches 4
             if (i == 4) {
                 break;
             }
 
+            // This line runs only while the loop continues
             System.out.println(i);
         }
 
+        // ---------- Using continue ----------
+        // continue skips the rest of the current iteration
+
         for (int i = 0; i &lt; 10; i++) {
 
+            // When i is 4, print a message and skip the normal print below
             if (i == 4) {
                 System.out.println(&quot;four&quot;);
                 continue;
             }
 
+            // This line is skipped only when continue is triggered
             System.out.println(i);
         }
+
 
 </code></pre>
 
@@ -880,19 +1031,22 @@
             </div>
           </div>
         </div>
-</section><section class="section" id="sec-16">
+</section><section class="section" id="sec-17">
   <div class="section-header">
     <h2>16. ARRAYS</h2>
-    <button class="copy" data-target="sec-16">Copy code</button>
+    <button class="copy" data-target="sec-17">Copy code</button>
   </div>
 
   <pre class="code"><code class="language-java">        // 16. ARRAYS
 
+        // Syntax reminder:
         // dataType[] arrayName = new dataType[arraySize];
+
+        // Create an array that can hold exactly 5 integers
 
         int[] numbersArray = new int[5];
 
-        // storing values in the array manually
+        // Store values in the array by assigning each index manually
 
         numbersArray[0] = 10;
         numbersArray[1] = 20;
@@ -900,17 +1054,22 @@
         numbersArray[3] = 40;
         numbersArray[4] = 50;
 
-        // storing values in the array with a for loop
+        // Create another array to demonstrate filling values with a loop
 
         int[] numbersArray2 = new int[5];
+
+        // Assign each index a value based on the loop counter
 
         for (int i = 0; i &lt; numbersArray2.length; i++) {
             numbersArray2[i] = i;
         }
 
-        // Accessing elements in the array and printing them
+        // Access a single element using its index
 
-        System.out.println(&quot;Element at index 0: &quot; + numbersArray[0]); // Element at index 0: 10
+        System.out.println(&quot;Element at index 0: &quot; + numbersArray[0]); // 10
+
+        // Print the entire array in a readable format
+
         System.out.println(Arrays.toString(numbersArray2)); // [0, 1, 2, 3, 4]
 
 </code></pre>
@@ -938,26 +1097,32 @@
             </div>
           </div>
         </div>
-</section><section class="section" id="sec-17">
+</section><section class="section" id="sec-18">
   <div class="section-header">
     <h2>17. FOR EACH LOOP</h2>
-    <button class="copy" data-target="sec-17">Copy code</button>
+    <button class="copy" data-target="sec-18">Copy code</button>
   </div>
 
   <pre class="code"><code class="language-java">        // 17. FOR EACH LOOP
 
-        /* for(dataType element : collection/array) {
-                code goes here
-            } */
+        // Syntax reminder:
+        // for (dataType element : collectionOrArray) { ... }
+
+        // Create an array to demonstrate for-each iteration
 
         int[] numbersArray3 = new int[5];
+
+        // Populate the array using a traditional for loop
 
         for (int i = 0; i &lt; numbersArray3.length; i++) {
             numbersArray3[i] = i;
         }
 
+        // Iterate over each element in the array and print to the console
+        // Each value is automatically converted from int to double
+
         for (double element : numbersArray3) {
-            System.out.println(element); // prints out the array as doubles!
+            System.out.println(element);
         }
 
 </code></pre>
@@ -985,76 +1150,93 @@
             </div>
           </div>
         </div>
-</section><section class="section" id="sec-18">
+</section><section class="section" id="sec-19">
   <div class="section-header">
     <h2>18. MULTI DIMENSIONAL ARRAYS</h2>
-    <button class="copy" data-target="sec-18">Copy code</button>
+    <button class="copy" data-target="sec-19">Copy code</button>
   </div>
 
   <pre class="code"><code class="language-java">        // 18. MULTI DIMENSIONAL ARRAYS
 
-        // Syntax:
+        // Syntax reminder:
         // dataType[][] arrayName = new dataType[rows][columns];
 
-        // 3 rows and 3 columns
+        // Create a 2D array with 3 rows and 3 columns
 
         int[][] myMatrix = new int[3][3];
 
-        // Storing values in the 2D array
+        // ---------- Manually populating a 2D array ----------
 
-        // first row
-
+        // First row
         myMatrix[0][0] = 1;
         myMatrix[0][1] = 2;
         myMatrix[0][2] = 3;
 
-        // second row
-
+        // Second row
         myMatrix[1][0] = 4;
         myMatrix[1][1] = 5;
         myMatrix[1][2] = 6;
 
-        // third row
-
+        // Third row
         myMatrix[2][0] = 7;
         myMatrix[2][1] = 8;
         myMatrix[2][2] = 9;
 
-        // Accessing elements in the 2D Array &amp; printing them
+        // Access a specific element using row and column indexes
 
         System.out.println(myMatrix[2][0]); // 7
 
-        // Another way to populate the 2D array
+        // ---------- Initializing a 2D array with values ----------
 
         int[][] myMatrix2 = {
-                {1,2,3},
-                {4,5,6},
-                {7,8,9}
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
         };
 
-        // 2d array with nested for loops
+        // ---------- Using nested loops with a 2D array ----------
 
-        int[][] grid = new int[3][4]; // 3 rows, 4 columns
+        // Create a grid with 3 rows and 4 columns
+
+        int[][] grid = new int[3][4];
+
+        // Loop through each row
 
         for (int row = 0; row &lt; grid.length; row++) {
+
+            // Loop through each column in the current row
             for (int col = 0; col &lt; grid[row].length; col++) {
+
+                // Assign a value based on row and column indexes
                 grid[row][col] = row + col;
+
+                // Print the value in a grid-like format
                 System.out.print(grid[row][col] + &quot; &quot;);
             }
+
+            // Move to the next line after each row
             System.out.println();
         }
 
-        // Times Table 10 * 10
+        // ---------- Multiplication table (10 x 10) ----------
+
+        // Create a table large enough for values 1 through 10
 
         int[][] table = new int[11][11];
 
-        // populate the table and print it
+        // Populate and print the multiplication table
 
         for (int i = 1; i &lt; table.length; i++) {
             for (int j = 1; j &lt; table[i].length; j++) {
+
+                // Multiply row and column values
                 table[i][j] = i * j;
+
+                // Print formatted output for alignment
                 System.out.printf(&quot;%4d&quot;, table[i][j]);
             }
+
+            // New line after each row
             System.out.println();
         }
 
@@ -1083,69 +1265,75 @@
             </div>
           </div>
         </div>
-</section><section class="section" id="sec-19">
+</section><section class="section" id="sec-20">
   <div class="section-header">
     <h2>19. ARRAYLIST</h2>
-    <button class="copy" data-target="sec-19">Copy code</button>
+    <button class="copy" data-target="sec-20">Copy code</button>
   </div>
 
   <pre class="code"><code class="language-java">        // 19. ARRAYLIST
 
-        // Create a Scanner object to read user input
+        // Create a Scanner to read user input from the console
 
         Scanner input = new Scanner(System.in);
 
-        // Create an ArrayList to store the user input
+        // Create an ArrayList to store an unknown number of integers
 
         ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();
 
-        // Initialize a variable to store the sum of the numbers
+        // Initialize a running total for all numbers entered
 
         int sum = 0;
 
-        // Prompt the user to enter numbers and read them into the ArrayList
+        // Prompt the user with instructions for stopping input
 
         System.out.println(&quot;Please enter numbers (type -101 to stop):&quot;);
 
-        // Populate the ArrayList with user input
+        // Continuously read input until the sentinel value is entered
 
         while (true) {
+
+            // Read the next integer from the user
             int num = input.nextInt();
 
+            // Stop the loop when the sentinel value is encountered
             if (num == -101) {
                 break;
             }
+
+            // Store the valid number in the ArrayList
             numbers.add(num);
         }
 
+        // Close the Scanner since input is no longer needed
+
         input.close();
 
-        // Print the populated ArrayList of numbers
+        // Display all numbers that were entered
 
         System.out.println(numbers);
 
-        // Check if the ArrayList is empty
+        // Guard clause: exit early if no numbers were entered
 
         if (numbers.isEmpty()) {
             System.out.println(&quot;No numbers entered.&quot;);
             return;
         }
 
-        // Add up the total of the numbers in the ArrayList
-
+        // Loop through the ArrayList and accumulate the total
         for (int i = 0; i &lt; numbers.size(); i++) {
             sum += numbers.get(i);
         }
 
-        // Calculate the average of the numbers
+        // Calculate the average using type casting to avoid integer division
 
         double average = (double) sum / numbers.size();
 
-        // Print the average
+        // Display the final calculated average
 
         System.out.println(&quot;The average of the numbers is: &quot; + average);
 
-    } // endofmain
+    } // end of main
 
 </code></pre>
 
@@ -1172,27 +1360,38 @@
             </div>
           </div>
         </div>
-</section><section class="section" id="sec-20">
+</section><section class="section" id="sec-21">
   <div class="section-header">
     <h2>20. METHODS</h2>
-    <button class="copy" data-target="sec-20">Copy code</button>
+    <button class="copy" data-target="sec-21">Copy code</button>
   </div>
 
   <pre class="code"><code class="language-java">    // 20. METHODS
+
+    // A simple static method that returns the sum of two numbers
+    // This method does not take parameters and always returns the same result
 
     public static int additionFunction() {
 
         int x = 7;
         int y = 3;
 
+        // Return the result of the calculation to the caller
         return x + y; // 10
     }
 
+    // An instance method that determines the number of days in a month
+    // This method requires an object of JavaBasics to be called
+
     public int daysOfMonthSwitch() {
 
+        // Store the month name to evaluate
         String monthName = &quot;May&quot;;
+
+        // Variable to hold the calculated number of days
         int number_Of_DaysInMonth = 0;
 
+        // Select the correct number of days based on the month
         switch (monthName) {
             case &quot;January&quot;:
             case &quot;March&quot;:
@@ -1203,29 +1402,39 @@
             case &quot;December&quot;:
                 number_Of_DaysInMonth = 31;
                 break;
+
             case &quot;April&quot;:
             case &quot;June&quot;:
             case &quot;September&quot;:
             case &quot;November&quot;:
                 number_Of_DaysInMonth = 30;
                 break;
+
             case &quot;February&quot;:
                 number_Of_DaysInMonth = 28;
                 break;
+
             default:
                 System.out.println(&quot;Not A Month&quot;);
                 break;
         }
+
+        // Return the calculated number of days
         return number_Of_DaysInMonth;
     }
+
+    // A static method that calculates the sum of numbers from 0 through 10
 
     public static int sumUpNumbers(){
 
         int sum = 0;
 
+        // Add each number in the range to the running total
         for (int i = 0; i &lt;= 10; i++) {
             sum += i;
         }
+
+        // Return the final total
         return sum;
     }
 }
